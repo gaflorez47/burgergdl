@@ -1,11 +1,19 @@
 @CHARSET "UTF-8";
 
+.node-restaurant .photos-wrapper{
+  position: relative;
+}
 .node-restaurant .photos{
   float: left;
   width: 100%;
   position: relative;
-  height: 105px;
+  height: 100%;
   overflow-y: scroll;
+}
+.node-restaurant .logo{
+  position: absolute;
+  z-index: 2;
+  top: 123px;
 }
 .node-restaurant .photo{
   float: left;
