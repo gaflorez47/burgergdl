@@ -1,0 +1,8 @@
+name = core
+description = Support for burger gdl
+core = 7.x
+version = 7.x-1.x
+package = Burger GDL
+configure = admin/config/burgergdl
+
+
