@@ -80,21 +80,23 @@
 ?>
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <div class="photos">
+  <ul class="photos mycarousel jcarousel-skin-default">
     <?php 
     $photos = $node->photos;
     foreach ($photos as $photo):
     ?>
-      <div class="photo">
+      <li class="photo">
         <img width="100" height="100" src="<?=$photo?>"/>
-      </div>
+      </li>
     <?php endforeach;?>
-  </div>
-  
+  </ul>
+  <?php
+    jcarousel_add('mycarousel', array('vertical' => 0, 'auto'=>10, 'scroll'=>1, 'visible'=>4, 'animation'=>1000));
+  ?>
     <div class="content clearfix"<?php print $content_attributes; ?>>
     <?=$node->body['und'][0]['value']?>
 <?php
-      //var_dump($node);
+      //var_dump($node->tips);
     ?>
   </div>
   <div class="tips">
@@ -103,8 +105,13 @@
     foreach ($node->tips as $tip):
     ?>
       <div class="tip">
-        <p class="user"><?=$tip->user->firstName?></p>
-        <p class="tip-text"><?=$tip->text?></p>
+        <div class="left">
+          <img src="<?=$tip->user->photo?>" width="30" height="30"/>
+        </div>
+        <div class="right">
+          <p class="user"><?=$tip->user->firstName?></p>
+          <p class="tip-text"><?=$tip->text?></p>
+        </div>
       </div>
     <?php endforeach;?>
   </div>

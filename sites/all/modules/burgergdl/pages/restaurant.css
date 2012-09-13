@@ -24,6 +24,25 @@
   margin:0;
 }
 
+.node-restaurant .tips .tip{
+  position: relative;
+  width: 100%;
+  float: left;
+}
+
+.node-restaurant .tips .tip .left,
+.node-restaurant .tips .tip .right{
+  float: left;
+}
+
+.node-restaurant .tips .tip .right{
+  position: relative;
+  width: 90%;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eeeeee;
+}
+
 .node-restaurant .tips .user{
   font-weight: bold;
 }
