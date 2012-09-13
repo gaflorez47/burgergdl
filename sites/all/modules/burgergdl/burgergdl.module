@@ -9,12 +9,17 @@ function burgergdl_node_view($node, $view_mode, $langcode){
   $util = new FoursquareUtil();
   $photos = $util->get_photos($venue_id);
   $node->photos = $photos;
-  
+  $tips = $util->get_tips($venue_id);
+  $node->tips = $tips;
   //drupal_set_message(drupal_get_path('module', 'burgergdl'));
+
+  $module_path = drupal_get_path('module', 'burgergdl');
+  drupal_add_css("$module_path/pages/restaurant.css");
 }
 
 
 function burgergdl_theme($existing, $type, $theme, $path) {
+  $module_path = drupal_get_path('module', 'burgergdl');
   $items = array(
     'node__restaurant' => array(
       // Don't specify the path in the template name.
@@ -22,7 +27,7 @@ function burgergdl_theme($existing, $type, $theme, $path) {
       'template' =>  'node--restaurant',
       'variables' => array('node' => (object)array()),
       // If you want to put the tpl in another location, you can use this key.
-      'theme path' => drupal_get_path('module', 'burgergdl'),
+      'path' => $module_path.'/pages',
     ),
   );
   return $items;

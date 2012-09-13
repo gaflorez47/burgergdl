@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+.node-restaurant .photos{
+  float: left;
+  width: 100%;
+  position: relative;
+  height: 105px;
+  overflow-y: scroll;
+}
+.node-restaurant .photo{
+  float: left;
+}
+
+.node-restaurant .tips{
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin-top: 30px;
+  overflow-y: scroll;
+}
+
+.node-restaurant .tips p{
+  margin:0;
+}
+
+.node-restaurant .tips .user{
+  font-weight: bold;
+}

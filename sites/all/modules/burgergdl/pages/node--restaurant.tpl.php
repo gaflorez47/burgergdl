@@ -97,5 +97,16 @@
       //var_dump($node);
     ?>
   </div>
+  <div class="tips">
+    <h2><?=t('Tips')?></h2>
+    <?php
+    foreach ($node->tips as $tip):
+    ?>
+      <div class="tip">
+        <p class="user"><?=$tip->user->firstName?></p>
+        <p class="tip-text"><?=$tip->text?></p>
+      </div>
+    <?php endforeach;?>
+  </div>
 
 </div>
