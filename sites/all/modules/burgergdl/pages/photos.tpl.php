@@ -7,11 +7,11 @@
     foreach ($photos as $photo):
     ?>
       <li class="photo">
-        <img width="auto" height="100%" src="<?=$photo?>"/>
+        <img width="100%" height="auto" src="<?=$photo?>"/>
       </li>
     <?php endforeach;?>
   </ul>
 <?php
-  jcarousel_add('mycarousel', array('vertical' => 0, 'auto'=>10, 'scroll'=>1, 'visible'=>4, 'animation'=>1000));
+  jcarousel_add('mycarousel', array('vertical' => 0, 'auto'=>10, 'scroll'=>1, 'visible'=>3, 'animation'=>1000));
 ?>
 </div>

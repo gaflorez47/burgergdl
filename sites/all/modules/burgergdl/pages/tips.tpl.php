@@ -1,5 +1,6 @@
 <div class="tips">
   <h2><?=t('Tips')?></h2>
+  <div class="tips-container">
   <?php
   foreach ($node->tips as $tip):
   ?>
@@ -13,4 +14,5 @@
       </div>
     </div>
   <?php endforeach;?>
+  </div>
 </div>
