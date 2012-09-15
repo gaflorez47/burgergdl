@@ -11,6 +11,9 @@ function burgergdl_node_view($node, $view_mode, $langcode){
   $node->photos = $photos;
   $tips = $util->get_tips($venue_id);
   $node->tips = $tips;
+  $location = $util->get_location($venue_id);
+  $node->location = $location;
+  
   //drupal_set_message(drupal_get_path('module', 'burgergdl'));
 
   $module_path = drupal_get_path('module', 'burgergdl');

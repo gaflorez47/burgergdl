@@ -54,4 +54,16 @@ class FoursquareUtil{
     return $this->save_cache($cache_key, $tips);
   }
   
+  function get_location($venue_id){
+    $cache_key = $this->cache_id($venue_id, 'location');
+    $cache_obj = $this->get_cache($cache_key);
+    if($cache_obj){return $cache_obj;}
+    
+    $response = $this->foursquare->GetPublic("venues/$venue_id");
+    $location = json_decode($response)->response->venue->location;
+    return $this->save_cache($cache_key, $location);
+    
+
+  }
+  
 }

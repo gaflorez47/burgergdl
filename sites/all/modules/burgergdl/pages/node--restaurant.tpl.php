@@ -7,6 +7,7 @@
   </div>
   
   <?php require 'social_widgets.tpl.php';?>
+  <?php require 'map.tpl.php';?>
   <?php require 'tips.tpl.php';?>
   <?php require 'fb_comments.tpl.php';?>
   

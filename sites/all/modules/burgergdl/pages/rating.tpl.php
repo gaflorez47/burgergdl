@@ -1,4 +1,4 @@
-<h2><?=t('Rating')?></h2>
+<h2>Calificaci&#243;n</h2>
 <div class="rating">
   <?php 
   $rate = intval($node->field_food_rating['und'][0]['value']);
